@@ -16,10 +16,10 @@ export default {
   data() {
     return {
       places: [
-                {id: 111, name: "Post Tower", coordinates: "50.715908304046096, 7.130024727181158", image:require('././images/Bonn_Posttower.jpg'), date:"01.01.2020"},
-                {id: 112, name: "Beethoven Haus", coordinates: "50.73694246060538, 7.101285829373529", image:require('././images/Bonn_Beethoven_Haus.png'), date:"06.04.2002"},
-                {id: 113, name: "Rheinaue", coordinates: "50.71182963646694, 7.141172168659466", image:require('././images/Bonn_Rheinaue.jpg'), date:"02.05.2019"},
-                {id: 114, name: "Secret Location", coordinates: "", image:require('././images/Bonn_Secret.jpg'), date:"08.10.2020"},
+                {id: 111, name: "Post Tower", coordinates: "50.715908304046096, 7.130024727181158", image:require('@/assets/images/Bonn_Posttower.jpg'), date:"01.01.2020"},
+                {id: 112, name: "Beethoven Haus", coordinates: "50.73694246060538, 7.101285829373529", image:require('@/assets/images/Bonn_Beethoven_Haus.png'), date:"06.04.2002"},
+                {id: 113, name: "Rheinaue", coordinates: "50.71182963646694, 7.141172168659466", image:require('@/assets/images/Bonn_Rheinaue.jpg'), date:"02.05.2019"},
+                {id: 114, name: "Secret Location", coordinates: "", image:require('@/assets/images/Bonn_Secret.jpg'), date:"08.10.2020"},
             ]
     }
   },
