@@ -2,6 +2,6 @@ import axios from 'axios'
 
 export default() => {
   return axios.create({
-    baseURL: 'http://'+location.hostname+':8081'
+    baseURL: 'https://my-json-server.typicode.com/Tobssen/places-app/'
   })
 }
