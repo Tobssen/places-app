@@ -1,6 +1,6 @@
 <template>
   <div class="place-card">
-    <img class="place-img" :src="require(place.image)"/>
+    <img class="place-img" :src="place.image"/>
     <span>last visit on {{ place.date }}</span>
     <h4>{{ place.name }}</h4>
   </div>
