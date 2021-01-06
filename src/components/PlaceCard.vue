@@ -1,9 +1,9 @@
 <template>
   <div class="place-card">
-    <img class="place-img" :src="place.image" />
+    <img class="place-img" :src="place.image" @click="toggleDivClass(place.id)"/>
     <span>last visit on {{ place.date }}</span>
     
-<router-link to="/details/111">
+<router-link :to="{name: 'Details', params: { id: place.id } }">
     <h4>{{ place.name }}</h4>
     
   </router-link>
@@ -15,12 +15,21 @@
 
 <script>
 export default {
-  methods: {
-    toggleDivClass(placeId) {
+   methods: {
+      toggleDivClass(placeId) {
       console.log(placeId + document.getElementById(placeId));
       document.getElementById(placeId).classList.toggle("place-card-click");
+      var x = document.getElementById("p" + placeId);
+
+      console.log(x);
+      if (x.style.display === "none") {
+        x.style.display = "block";
+      } else {
+        x.style.display = "none";
+      }
+      document.getElementById(placeId).classList.toggle("place-card");
     }
-  },
+  }, 
   props: {
     place: {
       type: Object,

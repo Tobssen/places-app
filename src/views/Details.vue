@@ -1,8 +1,9 @@
 <template>
-  <div>
+  <div v-if="place">
     <h1> {{ place.name }} </h1>
     <p> last visited {{ place.date }} </p>
     <p> {{ place.description }} </p>
+    <span> place #{{ $route.params.id}}</span>
   </div>
 </template>
 
@@ -11,10 +12,10 @@
 import PlaceService from '@/services/PlaceService.js'
 // @ is an alias to /src
 export default {
+  props: ['id'],
   data() {
     return {
-      place: null,
-      id: 111
+      place: null
     }
   },
   created(){

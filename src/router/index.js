@@ -21,8 +21,9 @@ const routes = [
     component: Places
   },
   {
-    path: "/details/111",
+    path: "/details/:id",
     name: "Details",
+    props: true,
     component: Details
   }
 ];

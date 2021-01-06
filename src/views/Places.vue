@@ -5,7 +5,7 @@
       :id="place.id"
       :key="place.id"
       :place="place"
-      @click="toggleDivClass(place.id)"
+      
     />
   </div>
 </template>
@@ -36,11 +36,6 @@ export default {
     toggleDivClass(placeId) {
       console.log(placeId + document.getElementById(placeId));
       document.getElementById(placeId).classList.toggle("place-card-click");
-      //document.getElementById(placeId).classList.toggle('hover');
-      //var p = document.createElement("p")
-      //p.innerHTML = placeId
-      //document.getElementById(placeId).appendChild(p)
-
       var x = document.getElementById("p" + placeId);
 
       console.log(x);
