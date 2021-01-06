@@ -1,52 +1,58 @@
 <template>
-  <div class="places" >
-    <PlaceCard v-for="place in places" :id="place.id" :key="place.id" :place="place" @click="toggleDivClass(place.id)"/>
+  <div class="places">
+    <PlaceCard
+      v-for="place in places"
+      :id="place.id"
+      :key="place.id"
+      :place="place"
+      @click="toggleDivClass(place.id)"
+    />
   </div>
 </template>
 
 <script>
 // @ is an alias to /src
-import PlaceCard from '@/components/PlaceCard.vue'
-import PlaceService from '@/services/PlaceService.js'
+import PlaceCard from "@/components/PlaceCard.vue";
+import PlaceService from "@/services/PlaceService.js";
 
 export default {
-  name: 'places',
+  name: "places",
   components: {
     PlaceCard
   },
   data() {
     return {
       places: []
-    }
+    };
   },
-  mounted () {
-    this.getPlaces()
+  mounted() {
+    this.getPlaces();
   },
   methods: {
-    async getPlaces () {
-      const response = await PlaceService.fetchPlaces()
-      this.places = response.data
+    async getPlaces() {
+      const response = await PlaceService.fetchPlaces();
+      this.places = response.data;
     },
-    toggleDivClass(placeId){
-      console.log(placeId+document.getElementById(placeId))
-      document.getElementById(placeId).classList.toggle('place-card-click');
+    toggleDivClass(placeId) {
+      console.log(placeId + document.getElementById(placeId));
+      document.getElementById(placeId).classList.toggle("place-card-click");
       //document.getElementById(placeId).classList.toggle('hover');
       //var p = document.createElement("p")
       //p.innerHTML = placeId
       //document.getElementById(placeId).appendChild(p)
 
-      var x = document.getElementById('p'+placeId);
-      
-      console.log(x)
+      var x = document.getElementById("p" + placeId);
+
+      console.log(x);
       if (x.style.display === "none") {
-        x.style.display = "block"
+        x.style.display = "block";
       } else {
-        x.style.display = "none"
+        x.style.display = "none";
       }
-      document.getElementById(placeId).classList.toggle('place-card');
+      document.getElementById(placeId).classList.toggle("place-card");
     }
   }
-}
+};
 </script>
 
 <style scoped>

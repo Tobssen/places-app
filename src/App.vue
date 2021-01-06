@@ -1,10 +1,8 @@
 <template>
-  <div id="nav">
+  <div id="nav" class="nav-bar">
     <router-link to="/">Home</router-link> |
     <router-link to="/about">About</router-link> |
-    <router-link to="/places">Places</router-link>|
-    <router-link to="/details">Details</router-link>|
-    <router-link to="/login">Login</router-link>
+    <router-link to="/places">Places</router-link>
   </div>
   <router-view />
 </template>
@@ -28,6 +26,19 @@
 }
 
 #nav a.router-link-exact-active {
-  color: #42b983;
+  color: #f2f3f3;
+}
+
+.nav-bar {
+  background: linear-gradient(-90deg, #6ac8cf, #bfd16c);
+  height: 35px;
+  margin-bottom: 25px;
+  -webkit-box-shadow: 0px 2px 15px -12px rgba(0, 0, 0, 0.57);
+  -moz-box-shadow: 0px 2px 15px -12px rgba(0, 0, 0, 0.57);
+  box-shadow: 1px 1px 5px rgba(0, 0, 0, 0.57);
+}
+
+body {
+  overflow-y: scroll;
 }
 </style>

@@ -1,27 +1,33 @@
 <template>
-  <div class="place-card" >
-    <img class="place-img" :src="place.image"/>
+  <div class="place-card">
+    <img class="place-img" :src="place.image" />
     <span>last visit on {{ place.date }}</span>
+    
+<router-link to="/details/111">
     <h4>{{ place.name }}</h4>
-    <p :id="'p'+place.id" v-show="display == 'inline-block: false'">{{ place.description }}</p>
+    
+  </router-link>
+    <p :id="'p' + place.id" v-show="display == 'inline-block: false'">
+      {{ place.description }}
+    </p>
   </div>
 </template>
 
 <script>
 export default {
   methods: {
-    toggleDivClass(placeId){
-      console.log(placeId+document.getElementById(placeId))
-      document.getElementById(placeId).classList.toggle('place-card-click');
+    toggleDivClass(placeId) {
+      console.log(placeId + document.getElementById(placeId));
+      document.getElementById(placeId).classList.toggle("place-card-click");
     }
-  },  
+  },
   props: {
     place: {
       type: Object,
       required: true
     }
   }
-}
+};
 </script>
 
 <style scoped>
@@ -36,8 +42,7 @@ export default {
 
 .place-card:hover {
   transform: scale(1.01);
-  box-shadow: 0 3px 12
-  px 0 rgba(0, 0, 0, 0.2);
+  box-shadow: 0 3px 12 px 0 rgba(0, 0, 0, 0.2);
 }
 .place-card-click {
   position: relative;
@@ -50,12 +55,10 @@ export default {
 }
 .place-card-click:hover {
   transform: scale(1.51);
-  box-shadow: 0 3px 12
-  px 0 rgba(0, 0, 0, 0.2);
+  box-shadow: 0 3px 12 px 0 rgba(0, 0, 0, 0.2);
 }
 
-.place-img{
+.place-img {
   width: 250px;
-
 }
 </style>

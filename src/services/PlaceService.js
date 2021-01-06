@@ -1,7 +1,10 @@
-import Api from '@/services/Api'
+import Api from "@/services/Api";
 
 export default {
-  fetchPlaces () {
-    return Api().get('places')
+  fetchPlaces() {
+    return Api().get("places");
+  },
+  fetchPlace(id){
+    return Api().get("places/"+id);
   }
 }
