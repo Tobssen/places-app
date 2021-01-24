@@ -4,7 +4,12 @@
     <router-link to="/about">About</router-link> |
     <router-link to="/places">Places</router-link>
   </div>
-  <router-view />
+
+
+  <div class="window">
+
+   <router-view />
+  </div>
 </template>
 
 <style>
@@ -17,6 +22,10 @@
 }
 
 #nav {
+  overflow: hidden;
+  position: fixed;
+  left: 0;
+  top: 0;
   padding: 30px;
 }
 
@@ -29,7 +38,12 @@
   color: #f2f3f3;
 }
 
+
 .nav-bar {
+  z-index:2;
+  position: fixed;
+  overflow: hidden;
+  width: 100%;
   background: linear-gradient(-90deg, #6ac8cf, #bfd16c);
   height: 35px;
   margin-bottom: 25px;
@@ -38,7 +52,15 @@
   box-shadow: 1px 1px 5px rgba(0, 0, 0, 0.57);
 }
 
+.window{
+  z-index:1;
+  margin-top: 140px;
+  position:relative;
+  z-index:100px;
+}
+
 body {
   overflow-y: scroll;
+  position: relative;
 }
 </style>
