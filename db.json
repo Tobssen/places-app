@@ -1,8 +1,14 @@
 {
     "places": [
-              {"id": 111, "name": "Post Tower", "description": "The Post Tower is the tallest sky scraper in Bonn.", "coordinates": "50.715908304046096, 7.130024727181158", "image":"/images/Bonn_Posttower.jpg", "date":"01.01.2020"},
-              {"id": 112, "name": "Beethoven Haus",  "description": "Mr. Beethoven was born here.","coordinates": "50.73694246060538, 7.101285829373529", "image":"/images/Bonn_Beethoven_Haus.png", "date":"06.04.2002"},
-              {"id": 113, "name": "Rheinaue", "description": "The Rheinaue was build for a Bundesgartenshow.", "coordinates": "50.71182963646694, 7.141172168659466", "image":"/images/Bonn_Rheinaue.jpg", "date":"02.05.2019"},
-              {"id": 114, "name": "Secret Location",  "description": "This was an old embassy.", "coordinates": "", "image":"/images/Bonn_Secret.jpg", "date": "08.10.2020"}
-          ]
+            {"id": 111, "name": "Post Tower", "description": "The Post Tower is the tallest sky scraper in Bonn.", "coordinates": "50.715908304046096, 7.130024727181158", "image":"/images/Bonn_Posttower.jpg", "date":"01.01.2020"},
+            {"id": 112, "name": "Beethoven Haus",  "description": "Mr. Beethoven was born here.","coordinates": "50.73694246060538, 7.101285829373529", "image":"/images/Bonn_Beethoven_Haus.png", "date":"06.04.2002"},
+            {"id": 113, "name": "Rheinaue", "description": "The Rheinaue was build for a Bundesgartenshow.", "coordinates": "50.71182963646694, 7.141172168659466", "image":"/images/Bonn_Rheinaue.jpg", "date":"02.05.2019"},
+            {"id": 114, "name": "Secret Location",  "description": "This was an old embassy.", "coordinates": "", "image":"/images/Bonn_Secret.jpg", "date": "08.10.2020"}
+          ],
+    "products": [
+            {"id": 111, "name": "Phone 1", "description": "a very standard issue mobile phone", "price": "50.71", "image":"/images/Bonn_Posttower.jpg", "date":"01.01.2020"},
+            {"id": 111, "name": "Phone 2", "description": "a very standard issue mobile phone with touch", "price": "160.71", "image":"/images/Bonn_Posttower.jpg", "date":"01.01.2020"},
+            {"id": 111, "name": "Phone 3", "description": "a very standard issue mobile phone with front camera", "price": "250.71", "image":"/images/Bonn_Posttower.jpg", "date":"01.01.2020"},
+            {"id": 111, "name": "Phone 4", "description": "a high tech smart phone with a excellent camera", "price": "580.71", "image":"/images/Bonn_Posttower.jpg", "date":"01.01.2020"}
+        ]      
   }
